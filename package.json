@@ -1,0 +1,35 @@
+{
+  "name": "nodemon",
+  "version": "1.0.0",
+  "description": "node js practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js",
+    "dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagritisingh3456/node-tut.git"
+  },
+  "keywords": [
+    "code",
+    "practice"
+  ],
+  "author": "Jagriti Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jagritisingh3456/node-tut/issues"
+  },
+  "homepage": "https://github.com/jagritisingh3456/node-tut#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0",
+    "node": "^19.6.1",
+    "pkill": "^2.0.0",
+    "simple-node-logger": "^21.8.12"
+  },
+  "devDependencies": {}
+}
