@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js",
-    "dev":"nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,17 @@
   },
   "homepage": "https://github.com/jagritisingh3456/node-tut#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "colors": "^1.4.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "mongodb": "^5.1.0",
+    "mongoose": "^7.0.2",
     "node": "^19.6.1",
     "pkill": "^2.0.0",
     "simple-node-logger": "^21.8.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
 }

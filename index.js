@@ -292,6 +292,7 @@
 
 
 
+
                            //Middleware Route Level
 
 // const express = require('express');
@@ -309,20 +310,128 @@
 
 
 
-  
 
-const {MongoClient} = require('mongodb')
-const url= 'mongodb://localhost:27017';
-const databaseName='e-comm'
-const client= new MongoClient(url);
 
-async function getData()
-{
-    let result = await client.connect();
-    let db= result.db(databaseName);
-    let collection = db.collection('product');
-    let response = await collection.find({}).toArray();
-    console.log(response)
-}
-getData();
-                 
+   //To get data from mongodb compress
+
+// const {MongoClient} = require('mongodb');
+// const url= 'mongodb://127.0.0.1:27017';
+// const database='e-comm'
+// const client= new MongoClient(url);
+
+// async function getData()
+// {
+//     let result = await client.connect();
+//     let db = result.db(database);
+//     let collection = db.collection('product');
+//     let response = await collection.find({name:"shyam"}).toArray();
+//     console.log(response);
+// }
+// getData();
+
+
+    
+
+
+          //Read mongodb file(mongodb.js)
+
+// const dbConnect=require('./mongodb')
+// const main=async()=>{
+//         let data=await dbConnect();
+//         data=await data.find().toArray();
+//         console.log(data);
+// }
+// main();
+
+       
+
+
+       //To read mongodb data
+
+// const dbConnect= require('./mongodb');
+
+// dbConnect().then((resp)=>{
+// resp.find().toArray().then((data)=>{
+// console.log(data)
+// })
+// })
+// const main=async ()=>{
+//    let data = await dbConnect();
+//    data = await data.find().toArray();
+//    console.log(data)
+// }
+
+// main()
+
+
+
+
+// const mongoose = require('mongoose');
+
+// const main=async()=>{
+//         await mongoose.connect("mongodb://127.0.0.1:27017/e-comm");
+//         const ProductSchema=new mongoose.Schema({
+//                 name:String,
+//                 price:Number
+//         });
+//         const ProductModel = mongoose.model('product',ProductSchema);
+//         let data = new ProductsModel({name:"mataji",price:1000});
+//         let result = await data.save();
+//         console.log(result)
+// }  
+
+// main()
+
+
+
+          // CURD with Mongoose
+
+// const mongoose = require('mongoose');
+
+// mongoose.connect('mongodb://localhost:27017/e-comm');
+// const productSchema = new mongoose.Schema({
+//     name: String,
+//     price: Number,
+//     brand: String,
+//     category: String
+
+// });
+
+// const saveInDB = async () => {
+//     const Product = mongoose.model('products', productSchema);
+//     let data = new Product({
+//         name: "max 100",
+//         price: 200,
+//         brand: 'maxx',
+//         category: 'Mobile'
+//     });
+//     const result = await data.save();
+//     console.log(result);
+// }
+
+// const updateInDB =async  () => {
+//     const Product = mongoose.model('products', productSchema);
+//     let data =await  Product.updateOne(
+//         { name: "max 6" },
+//         {
+//             $set: { price: 550,name:'max pro 6' }
+//         }
+//     )
+//     console.log(data)
+// }
+
+// const deleteInDB = async ()=>{
+//     const Product = mongoose.model('products', productSchema);
+//     let data = await Product.deleteOne({name:'max 100'})
+//     console.log(data);
+// }
+// const findInDB = async ()=>{
+//     const Product = mongoose.model('products', productSchema);
+//     let data = await Product.find({name:'max pro 611'})
+//     console.log(data);
+// }
+
+// findInDB();
+
+
+
